@@ -18,7 +18,7 @@ fun main() {
     println(str?.length) // safe call : str이 null이면 전체가 null이 됨
     println(str?.length ?: 0) // elvis : str이 null이면 0
 
-    var person = Person("person1");
+    var person = PersonKotlin("person1", 10);
     // notNullStr(person.name); person.name은 nullable이라 컴파일에서 오류 발생
 
 }

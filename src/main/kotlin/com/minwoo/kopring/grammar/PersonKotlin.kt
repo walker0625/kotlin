@@ -1,3 +1,6 @@
 package com.minwoo.kopring.grammar
 
-class Person(val name: String)
+class PersonKotlin (
+    public val name: String,
+    public val age: Int
+)

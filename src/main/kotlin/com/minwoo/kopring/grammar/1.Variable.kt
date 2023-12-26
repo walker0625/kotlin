@@ -24,6 +24,6 @@ fun main() {
 
     // 4. 객체 선언
 
-    var person = Person("test"); // new를 사용하지 않음
+    var person = PersonKotlin("test", 10); // new를 사용하지 않음
 
 }
