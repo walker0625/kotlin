@@ -1,4 +1,4 @@
-package com.minwoo.kopring.grammar
+package com.minwoo.kopring.grammar.basic
 
 class MoneyKotlin(
     private val price: Int

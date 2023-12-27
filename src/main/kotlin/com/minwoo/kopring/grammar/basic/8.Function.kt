@@ -1,4 +1,4 @@
-package com.minwoo.kopring.grammar
+package com.minwoo.kopring.grammar.basic
 
 fun main() {
     defaultParam("test", newLine = false); // parameter를 지정해서 넣어줌(like builder)

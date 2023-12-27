@@ -1,13 +1,11 @@
-package com.minwoo.kopring.grammar
+package com.minwoo.kopring.grammar.basic
 
-import org.springframework.boot.autoconfigure.ssl.SslProperties
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
 import java.lang.IllegalArgumentException
 import java.lang.NumberFormatException
-import java.nio.Buffer
-import com.minwoo.kopring.grammar.FilePrinter as FilePrinter1
+import com.minwoo.kopring.grammar.basic.FilePrinter as FilePrinter1
 
 fun main() {
     //println(parseIntOrThrow("test"))
