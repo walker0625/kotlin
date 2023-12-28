@@ -1,6 +1,14 @@
 package com.minwoo.kopring.grammar.fp
 
+data class FruitDto (
+    val id: Long,
+    val name: String,
+    val factoryPrice: Long,
+    val currentPrice: Long
+)
+
 fun main() {
+
     val fruits = listOf(
         FruitDto(1,"apple", 2000, 3000),
         FruitDto(2,"apple", 2000, 4000),
@@ -13,13 +21,15 @@ fun main() {
     )
 
     val apples = fruits.filter { fruit -> fruit.name == "apple" }
-    val apples2 = fruits.filterIndexed() { index, fruit ->
+
+    val apples2 = fruits.filterIndexed { index, fruit ->
         println(index)
         fruit.name == "apple"
     }
-    val apples3 = fruits.filter { fruit -> fruit.name == "apple" }
-                        .map { fruit -> fruit.currentPrice}
-    apples3.forEach{price -> println(price)}
+
+    fruits.filter { fruit -> fruit.name == "apple" }
+        .map { fruit -> fruit.currentPrice}
+        .forEach{price -> println(price)}
 
     filterFruits(fruits) { fruit -> fruit.name == "apple" && fruit.currentPrice < 5000}
         .forEach{apple -> println(apple.id) }
@@ -42,13 +52,17 @@ fun main() {
     fruits.lastOrNull()
 
     val map: Map<String, List<FruitDto>> = fruits.groupBy { fruit -> fruit.name }
+
     val unique: Map<Long, FruitDto> = fruits.associateBy { fruit -> fruit.id }
+
     val keyValue: Map<String, List<Long>> = fruits.groupBy(
         {fruit -> fruit.name}, {fruit -> fruit.currentPrice}
     )
+
     val uniqueKeyValue: Map<Long, Long> = fruits.associateBy(
         {fruit -> fruit.id}, {fruit -> fruit.currentPrice}
     )
+
 }
 
 fun filterFruits (
@@ -58,9 +72,3 @@ fun filterFruits (
     return fruits.filter(filter)
 }
 
-data class FruitDto (
-    val id: Long,
-    val name: String,
-    val factoryPrice: Long,
-    val currentPrice: Long
-)
