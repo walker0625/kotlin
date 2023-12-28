@@ -1,4 +1,4 @@
-package com.minwoo.kopring.grammar.fp
+package com.minwoo.kopring.grammar.basic
 
 fun main() {
     //immutableList()

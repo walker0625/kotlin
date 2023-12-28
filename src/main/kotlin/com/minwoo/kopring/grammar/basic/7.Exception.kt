@@ -43,8 +43,9 @@ class FilePrinter {
 
     fun readFile2(path: String) {
         // try with resource 방식의 kotlin 방식(use-inline 확장 함수)
-        BufferedReader(FileReader(path)).use { readers ->
-            println(readers.readLine())
+        // T.use(block: (T) -> R): R > T
+        BufferedReader(FileReader(path)).use { reader ->
+            println(reader.readLine())
         }
     }
 

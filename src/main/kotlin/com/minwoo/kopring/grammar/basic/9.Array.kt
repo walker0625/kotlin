@@ -1,5 +1,6 @@
-package com.minwoo.kopring.grammar.fp
+package com.minwoo.kopring.grammar.basic
 
+// array를 쓰는 것보다는 collection(List)을 사용하는 것이 권장되기는 함
 fun main() {
 
     var array = arrayOf(100, 200)
